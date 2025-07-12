@@ -1,11 +1,8 @@
 # Langkah install php
 sudo apt update
 sudo apt install apache2
-sudo apt install php8.2 php8.2-curl libapache2-mod-php8.2 php8.2-bcmath php8.2-zip php8.2-mbstring php8.2-mysql php8.2-gd php8.2-xml php8.2-tokenizer php-common php-json php-sqlite3
-sudo nano /etc/apache2/mods-enabled/dir.conf
-ubah menjadi= DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
-sudo nano /var/www/html/phpinfo.php
-isi=  <?php phpinfo(); ?>
+sudo apt install php
+sudo apt install php-mysqli
 
 # Langkah install php 
 sudo wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz
