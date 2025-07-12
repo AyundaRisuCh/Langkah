@@ -15,13 +15,27 @@ sudo wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.t
 ```bash
 sudo mkdir /var/www/html/phpmyadmin
 ```
+```bash
 sudo tar xvf phpMyAdmin-latest-all-languages.tar.gz --strip-components=1 -C /var/www/html/phpmyadmin
+```
+``` bash
 sudo cp /var/www/html/phpmyadmin/config.sample.inc.php /var/www/html/phpmyadmin/config.inc.php
+```
+``` bash
 sudo nano /var/www/html/phpmyadmin/config.inc.php
+```
+``` bash
 $cfg['blowfish_secret'] = 'My_Secret_Passphras3!';
+```
+``` bash
 sudo chmod 775 /var/www/html/phpmyadmin/config.inc.php
+```
+``` bash
 sudo chown -R ubuntu:ubuntu /var/www/html/phpmyadmin
+```
+``` bash
 sudo systemctl restart apache2
+```
 
 -- Membuat database sederhana
 CREATE DATABASE IF NOT EXISTS sigap_db;
