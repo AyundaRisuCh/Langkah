@@ -11,7 +11,7 @@ sudo tar xvf phpMyAdmin-latest-all-languages.tar.gz --strip-components=1 -C /var
 sudo cp /var/www/html/phpmyadmin/config.sample.inc.php /var/www/html/phpmyadmin/config.inc.php
 sudo nano /var/www/html/phpmyadmin/config.inc.php
 $cfg['blowfish_secret'] = 'My_Secret_Passphras3!';
-sudo chmod 660 /var/www/html/phpmyadmin/config.inc.php
+sudo chmod 775 /var/www/html/phpmyadmin/config.inc.php
 sudo chown -R www-data:www-data /var/www/html/phpmyadmin
 sudo systemctl restart apache2
 
