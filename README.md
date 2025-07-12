@@ -91,3 +91,17 @@ Membuat auto scaling
 - di step 4, bagian scaling max nya buat 2 lalu next
 - step 5 & 6 next saja
 - step terakhir klik create auto scaling group
+
+sudo apt install git
+sudo apt update
+sudo apt install apache2
+sudo apt install git
+cd /var/www/html
+ls
+sudo rm index.html
+cd ..
+sudo chown ubuntu:ubuntu html
+sudo chmod 775 -R html
+ls -l
+cd html
+git clone (link GitHub) .
