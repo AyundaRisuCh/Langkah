@@ -49,36 +49,36 @@ git push -u origin main
 
 #Buat connection
 
-Masuk ke service CodeCommit
+1. Masuk ke service CodeCommit
 
-Disebelah kiri paling bawah klik Setings dan klik Connections
+2. Disebelah kiri paling bawah klik Setings dan klik Connections
 
-Create Connection
+3. Create Connection
 
-Select providernya GitHub dan masukkan nama connectionnya, dan connect to GitHub
+4. Select providernya GitHub dan masukkan nama connectionnya, dan connect to GitHub
 
-Pada app instalations buat repository access menjadi all repositories, klik save
+5. Pada app instalations buat repository access menjadi all repositories, klik save
 
-Kemudian connect
+6. Kemudian connect
 
-Masuk ke CodeBuild
+7. Masuk ke CodeBuild
 
-Klik create project
+8. Klik create project
 
-Buat nama projectnya, source ubah menjadi github jika belum ada akun dikaitkan dulu akunnya, pilih "repository in my GitHub account" dan pilih repositorynya.
+9. Buat nama projectnya, source ubah menjadi github jika belum ada akun dikaitkan dulu akunnya, pilih "repository in my GitHub account" dan pilih repositorynya.
 
-Build typenya single build
+10. Build typenya single build
 
-Pada Environment OS nya buat ubuntu, pada service rolenya buat new role jika belum punya role (buat permision policiesnya AmazonEC2RoleforAWSCodeDeploy)
+11. Pada Environment OS nya buat ubuntu, pada service rolenya buat new role jika belum punya role (buat permision policiesnya AmazonEC2RoleforAWSCodeDeploy)
 
-Build specifications pilih Use a buildspec file dan masukkan namanya "buildspec.yml" (buat dulu filenya di vscode)
+12. Build specifications pilih Use a buildspec file dan masukkan namanya "buildspec.yml" (buat dulu filenya di vscode)
 
-Artifact primarynya pilih "Amazon S3", dan pilih bucket name yang dibuat tadi
+13. Artifact primarynya pilih "Amazon S3", dan pilih bucket name yang dibuat tadi
 
-Klik Create build project
+14. Klik Create build project
 
-Masuk ke code deploy
+15. Masuk ke code deploy
 
-Pilih application, dan creat application
+16. Pilih application, dan creat application
 
-Buat namanya dan platformnya pilih EC2, dan klik Create application
+17. Buat namanya dan platformnya pilih EC2, dan klik Create application
