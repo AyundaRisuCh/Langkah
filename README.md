@@ -37,6 +37,7 @@ sudo chown -R ubuntu:ubuntu /var/www/html/phpmyadmin
 sudo systemctl restart apache2
 ```
 
+``` bash
 -- Membuat database sederhana
 CREATE DATABASE IF NOT EXISTS sigap_db;
 
@@ -52,7 +53,8 @@ CREATE TABLE IF NOT EXISTS users (
     password VARCHAR(255) NOT NULL,
     role VARCHAR(10) DEFAULT 'user' NOT NULL
 );
-
+```
+``` bash
 -- Data admin (password dalam plain text - HANYA UNTUK BELAJAR)
 INSERT INTO users (nama, email, no_hp, password, role)
 VALUES (
@@ -72,7 +74,8 @@ VALUES (
     'user123',  -- Password dalam plain text
     'user'
 );
-
+```
+``` bash
 Buat di sql phpMyAdmin untuk bencana
 
 CREATE TABLE data_bencana (
@@ -81,7 +84,7 @@ CREATE TABLE data_bencana (
     lokasi VARCHAR(100) NOT NULL,
     waktu_kejadian DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-
+```
 
 Membuat replica di aws
 
