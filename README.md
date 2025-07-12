@@ -1,13 +1,14 @@
-# Langkah Install APACHE dan PHP
-## Update dan upgrade version repository linux/ubuntu
+## Langkah Install APACHE dan PHP
+### Update dan upgrade version repository linux/ubuntu
 ```bash
 sudo apt update && sudo apt upgrade
 ```
-## Install Apache2 dan PHP beserta module php-mysqli 
+### Install Apache2 dan PHP beserta module php-mysqli 
 ```bash
 sudo apt install apache2 php php-mysqli
 ```
 ## Langkah install phpMyAdmin
+### Download phpMyAdmin
 ```bash
 sudo wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz
 ```
