@@ -62,3 +62,32 @@ CREATE TABLE data_bencana (
     lokasi VARCHAR(100) NOT NULL,
     waktu_kejadian DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
+
+Membuat replica di aws
+
+- klik dashboard RDS
+- klik db instance
+- centang database lalu klik action klik create read replica
+- buat nama, single AZ, IPv4, publicly accessible, enable auto minor, lalu create read replica dan tunggu sampai available
+- jika sudah klik replica yang dibuat tadi dan copy endpointnya, pastekan endpointnya di tampil.php
+
+Membuat images server
+
+- pada menu instance centang server dan klik action, pilih "images dan template" lalu "create image"
+- masukkna nama image contoh "ServerDafa2"
+- klik create image
+- tunggu status di menu AMIs sampai available
+
+Membuat auto scaling
+
+- masuk kemenu auto scaling, dan create auto scaling
+- buat Namanya, dan create template
+- buat nama templatenya, pada "application and os" pilih "My AMIs" pilih instance yang kita buat
+- masukkan keypair, dan security groupnya, klik create launch template
+- balik pada tampilan create auto scaling, dan pilih template yang dibuat tadi, kemudian next
+- untuk cpu dan memory yang minimum buat 1, dan maximumnya 2, kemudian select zone nya dan next
+- di step 3 next aja ga ada yang diubah
+- di step 4, bagian scaling max nya buat 2 lalu next
+- step 5 & 6 next saja
+- step terakhir klik create auto scaling group
