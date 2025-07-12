@@ -76,7 +76,7 @@ VALUES (
 );
 ```
 ``` bash
-Buat di sql phpMyAdmin untuk bencana
+-- Buat di sql phpMyAdmin untuk bencana
 
 CREATE TABLE data_bencana (
     id INT AUTO_INCREMENT PRIMARY KEY,
