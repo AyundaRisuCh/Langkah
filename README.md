@@ -1,5 +1,8 @@
 # Langkah install php
+```bash
 sudo apt update
+```
+
 sudo apt install apache2
 sudo apt install php
 sudo apt install php-mysqli
