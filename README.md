@@ -31,7 +31,7 @@ $cfg['blowfish_secret'] = 'My_Secret_Passphras3!';
 sudo chmod 775 /var/www/html/phpmyadmin/config.inc.php
 ```
 ``` bash
-sudo chown -R ubuntu:ubuntu /var/www/html/phpmyadmin
+sudo chown -R ec2-user:ec2-user /var/www/html/phpmyadmin
 ```
 ``` bash
 sudo systemctl restart apache2
