@@ -34,7 +34,7 @@ sudo chmod 775 /var/www/html/phpmyadmin/config.inc.php
 sudo chown -R ec2-user:ec2-user /var/www/html/phpmyadmin
 ```
 ``` bash
-sudo systemctl restart apache2
+sudo systemctl restart httpd
 ```
 
 ``` bash
