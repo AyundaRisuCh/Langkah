@@ -1,11 +1,35 @@
 ## Langkah Install APACHE dan PHP
 ### Update dan upgrade version repository linux/ubuntu
 ```bash
-sudo apt update && sudo apt upgrade
+sudo yum update
 ```
 ### Install Apache2 dan PHP beserta module php-mysqli 
 ```bash
-sudo apt install apache2 php php-mysqli
+sudo yum install httpd php php-mysqli php-common php-xml php-unzip
+```
+```bash
+sudo systemctl enable httpd
+sudo systemctl start httpd
+sudo systemctl status httpd
+```
+```bash
+php -v
+```
+### Install git unzip composer 
+```bash
+sudo yum install git unzip composer
+```
+### Mengubah kepemilikan directory /var/www/html
+```bash
+sudo chown -R ec2-user:ec2-user /var/www/html
+sudo chmod -R 775 /var/www/html
+```
+### Menghapus file index.html
+```bash
+sudo rm index.html
+```
+```bash
+git clone https://github.com/AyundaRisuCh/belajarLKS.git .
 ```
 ## Langkah install phpMyAdmin
 ### Download phpMyAdmin
@@ -94,36 +118,3 @@ Membuat replica di aws
 - buat nama, single AZ, IPv4, publicly accessible, enable auto minor, lalu create read replica dan tunggu sampai available
 - jika sudah klik replica yang dibuat tadi dan copy endpointnya, pastekan endpointnya di tampil.php
 
-Membuat images server
-
-- pada menu instance centang server dan klik action, pilih "images dan template" lalu "create image"
-- masukkna nama image contoh "ServerDafa2"
-- klik create image
-- tunggu status di menu AMIs sampai available
-
-Membuat auto scaling
-
-- masuk kemenu auto scaling, dan create auto scaling
-- buat Namanya, dan create template
-- buat nama templatenya, pada "application and os" pilih "My AMIs" pilih instance yang kita buat
-- masukkan keypair, dan security groupnya, klik create launch template
-- balik pada tampilan create auto scaling, dan pilih template yang dibuat tadi, kemudian next
-- untuk cpu dan memory yang minimum buat 1, dan maximumnya 2, kemudian select zone nya dan next
-- di step 3 next aja ga ada yang diubah
-- di step 4, bagian scaling max nya buat 2 lalu next
-- step 5 & 6 next saja
-- step terakhir klik create auto scaling group
-
-sudo apt install git
-sudo apt update
-sudo apt install apache2
-sudo apt install git
-cd /var/www/html
-ls
-sudo rm index.html
-cd ..
-sudo chown ubuntu:ubuntu html
-sudo chmod 775 -R html
-ls -l
-cd html
-git clone (link GitHub) .
